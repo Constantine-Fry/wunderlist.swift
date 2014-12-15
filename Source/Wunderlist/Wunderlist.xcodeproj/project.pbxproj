@@ -9,6 +9,32 @@
 /* Begin PBXBuildFile section */
 		47E67C7E1A3F8116001FBB7A /* Wunderlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 47E67C7D1A3F8116001FBB7A /* Wunderlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47E67C9E1A3F817A001FBB7A /* WunderlistTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 47E67C9D1A3F817A001FBB7A /* WunderlistTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		47E67CC41A3F8328001FBB7A /* Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CB81A3F8328001FBB7A /* Authorizer.swift */; };
+		47E67CC51A3F8328001FBB7A /* Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CB81A3F8328001FBB7A /* Authorizer.swift */; };
+		47E67CC61A3F8328001FBB7A /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CB91A3F8328001FBB7A /* Configurations.swift */; };
+		47E67CC71A3F8328001FBB7A /* Configurations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CB91A3F8328001FBB7A /* Configurations.swift */; };
+		47E67CC81A3F8328001FBB7A /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CBA1A3F8328001FBB7A /* DateFormatter.swift */; };
+		47E67CC91A3F8328001FBB7A /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CBA1A3F8328001FBB7A /* DateFormatter.swift */; };
+		47E67CD01A3F8328001FBB7A /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CBE1A3F8328001FBB7A /* Objects.swift */; };
+		47E67CD11A3F8328001FBB7A /* Objects.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CBE1A3F8328001FBB7A /* Objects.swift */; };
+		47E67CD41A3F8328001FBB7A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CC01A3F8328001FBB7A /* Session.swift */; };
+		47E67CD51A3F8328001FBB7A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CC01A3F8328001FBB7A /* Session.swift */; };
+		47E67CD61A3F8328001FBB7A /* SessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CC11A3F8328001FBB7A /* SessionTask.swift */; };
+		47E67CD71A3F8328001FBB7A /* SessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CC11A3F8328001FBB7A /* SessionTask.swift */; };
+		47E67CDE1A3F834A001FBB7A /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CDC1A3F834A001FBB7A /* AuthorizationController.swift */; };
+		47E67CDF1A3F834A001FBB7A /* AuthorizationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E67CDD1A3F834A001FBB7A /* AuthorizationController.xib */; };
+		47E67CE71A3F8862001FBB7A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE11A3F8862001FBB7A /* Endpoint.swift */; };
+		47E67CE81A3F8862001FBB7A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE11A3F8862001FBB7A /* Endpoint.swift */; };
+		47E67CE91A3F8862001FBB7A /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE21A3F8862001FBB7A /* Files.swift */; };
+		47E67CEA1A3F8862001FBB7A /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE21A3F8862001FBB7A /* Files.swift */; };
+		47E67CEB1A3F8862001FBB7A /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE31A3F8862001FBB7A /* Lists.swift */; };
+		47E67CEC1A3F8862001FBB7A /* Lists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE31A3F8862001FBB7A /* Lists.swift */; };
+		47E67CED1A3F8862001FBB7A /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE41A3F8862001FBB7A /* Reminders.swift */; };
+		47E67CEE1A3F8862001FBB7A /* Reminders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE41A3F8862001FBB7A /* Reminders.swift */; };
+		47E67CEF1A3F8862001FBB7A /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE51A3F8862001FBB7A /* Tasks.swift */; };
+		47E67CF01A3F8862001FBB7A /* Tasks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE51A3F8862001FBB7A /* Tasks.swift */; };
+		47E67CF11A3F8862001FBB7A /* Uploads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE61A3F8862001FBB7A /* Uploads.swift */; };
+		47E67CF21A3F8862001FBB7A /* Uploads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE61A3F8862001FBB7A /* Uploads.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +44,20 @@
 		47E67C991A3F817A001FBB7A /* WunderlistTouch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = WunderlistTouch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E67C9C1A3F817A001FBB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47E67C9D1A3F817A001FBB7A /* WunderlistTouch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WunderlistTouch.h; sourceTree = "<group>"; };
+		47E67CB81A3F8328001FBB7A /* Authorizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authorizer.swift; sourceTree = "<group>"; };
+		47E67CB91A3F8328001FBB7A /* Configurations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configurations.swift; sourceTree = "<group>"; };
+		47E67CBA1A3F8328001FBB7A /* DateFormatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		47E67CBE1A3F8328001FBB7A /* Objects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
+		47E67CC01A3F8328001FBB7A /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
+		47E67CC11A3F8328001FBB7A /* SessionTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTask.swift; sourceTree = "<group>"; };
+		47E67CDC1A3F834A001FBB7A /* AuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
+		47E67CDD1A3F834A001FBB7A /* AuthorizationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorizationController.xib; sourceTree = "<group>"; };
+		47E67CE11A3F8862001FBB7A /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		47E67CE21A3F8862001FBB7A /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
+		47E67CE31A3F8862001FBB7A /* Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
+		47E67CE41A3F8862001FBB7A /* Reminders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reminders.swift; sourceTree = "<group>"; };
+		47E67CE51A3F8862001FBB7A /* Tasks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tasks.swift; sourceTree = "<group>"; };
+		47E67CE61A3F8862001FBB7A /* Uploads.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Uploads.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +136,13 @@
 		47E67CB21A3F81A3001FBB7A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				47E67CE01A3F8862001FBB7A /* Endpoints */,
+				47E67CC01A3F8328001FBB7A /* Session.swift */,
+				47E67CC11A3F8328001FBB7A /* SessionTask.swift */,
+				47E67CB81A3F8328001FBB7A /* Authorizer.swift */,
+				47E67CB91A3F8328001FBB7A /* Configurations.swift */,
+				47E67CBA1A3F8328001FBB7A /* DateFormatter.swift */,
+				47E67CBE1A3F8328001FBB7A /* Objects.swift */,
 			);
 			name = Shared;
 			path = ../Shared;
@@ -112,9 +159,24 @@
 		47E67CB41A3F81B8001FBB7A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
+				47E67CDC1A3F834A001FBB7A /* AuthorizationController.swift */,
+				47E67CDD1A3F834A001FBB7A /* AuthorizationController.xib */,
 			);
 			name = iOS;
 			path = ../iOS;
+			sourceTree = "<group>";
+		};
+		47E67CE01A3F8862001FBB7A /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				47E67CE11A3F8862001FBB7A /* Endpoint.swift */,
+				47E67CE21A3F8862001FBB7A /* Files.swift */,
+				47E67CE31A3F8862001FBB7A /* Lists.swift */,
+				47E67CE41A3F8862001FBB7A /* Reminders.swift */,
+				47E67CE51A3F8862001FBB7A /* Tasks.swift */,
+				47E67CE61A3F8862001FBB7A /* Uploads.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -222,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E67CDF1A3F834A001FBB7A /* AuthorizationController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +295,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E67CF11A3F8862001FBB7A /* Uploads.swift in Sources */,
+				47E67CE71A3F8862001FBB7A /* Endpoint.swift in Sources */,
+				47E67CE91A3F8862001FBB7A /* Files.swift in Sources */,
+				47E67CC81A3F8328001FBB7A /* DateFormatter.swift in Sources */,
+				47E67CC41A3F8328001FBB7A /* Authorizer.swift in Sources */,
+				47E67CD61A3F8328001FBB7A /* SessionTask.swift in Sources */,
+				47E67CED1A3F8862001FBB7A /* Reminders.swift in Sources */,
+				47E67CEF1A3F8862001FBB7A /* Tasks.swift in Sources */,
+				47E67CD01A3F8328001FBB7A /* Objects.swift in Sources */,
+				47E67CD41A3F8328001FBB7A /* Session.swift in Sources */,
+				47E67CC61A3F8328001FBB7A /* Configurations.swift in Sources */,
+				47E67CEB1A3F8862001FBB7A /* Lists.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,6 +314,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				47E67CEE1A3F8862001FBB7A /* Reminders.swift in Sources */,
+				47E67CC91A3F8328001FBB7A /* DateFormatter.swift in Sources */,
+				47E67CF21A3F8862001FBB7A /* Uploads.swift in Sources */,
+				47E67CEC1A3F8862001FBB7A /* Lists.swift in Sources */,
+				47E67CC51A3F8328001FBB7A /* Authorizer.swift in Sources */,
+				47E67CF01A3F8862001FBB7A /* Tasks.swift in Sources */,
+				47E67CEA1A3F8862001FBB7A /* Files.swift in Sources */,
+				47E67CE81A3F8862001FBB7A /* Endpoint.swift in Sources */,
+				47E67CD71A3F8328001FBB7A /* SessionTask.swift in Sources */,
+				47E67CDE1A3F834A001FBB7A /* AuthorizationController.swift in Sources */,
+				47E67CD11A3F8328001FBB7A /* Objects.swift in Sources */,
+				47E67CD51A3F8328001FBB7A /* Session.swift in Sources */,
+				47E67CC71A3F8328001FBB7A /* Configurations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +417,7 @@
 		47E67C8F1A3F8117001FBB7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -340,12 +429,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		47E67C901A3F8117001FBB7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -363,6 +454,7 @@
 		47E67CAD1A3F817A001FBB7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -379,6 +471,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -386,6 +479,7 @@
 		47E67CAE1A3F817A001FBB7A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

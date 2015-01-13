@@ -9,7 +9,7 @@
 import Foundation
 
 /** Task to perform network request. */
-@objc class SessionTask {
+public class SessionTask {
     
     /** The request which task will execute. */
     internal let request: NSURLRequest
@@ -38,7 +38,7 @@ import Foundation
         Starts the task.
         One can repeat the task as many times as he wants.
     */
-    func start() {
+    public func start() {
         if self.task == nil {
             let backgroundTask = UIApplication.sharedApplication().beginBackgroundTaskWithExpirationHandler{
                 () -> Void in
@@ -108,14 +108,14 @@ import Foundation
         Marks the task as cancelled.
         Error value of { NSURLErrorDomain, NSURLErrorCancelled } will be passed in completion handler.
     */
-    func cancel() {
+    public func cancel() {
         self.task?.cancel()
     }
     
 }
 
 /** The task to upload a file. */
-@objc class SessionUploadTask {
+public class SessionUploadTask {
     /** The session. */
     weak var session: Session?
     
@@ -140,7 +140,7 @@ import Foundation
     }
     
     /** Starts uploading. */
-    func start() {
+    public func start() {
         if self.task == nil {
             self.task = session?.URLSession.uploadTaskWithRequest(request, fromFile: fileURL) {
                 (data, response, error) -> Void in
@@ -164,7 +164,7 @@ import Foundation
         Marks the task as cancelled.
         Error value of { NSURLErrorDomain, NSURLErrorCancelled } will be passed in completion handler.
     */
-    func cancel() {
+    public func cancel() {
         self.task?.cancel()
     }
     

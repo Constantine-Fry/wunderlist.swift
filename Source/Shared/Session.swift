@@ -12,25 +12,25 @@ import Foundation
     Error domain for errors HTTP errors.
     Not localized. Error code is HTTP status code.
 */
-let SessionHTTPErrorDomain = "WunderlistHTTPErrorDomain"
+public let SessionHTTPErrorDomain = "WunderlistHTTPErrorDomain"
 
-let SessionErrorDomain = "WunderlistSessionErrorDomain"
+public let SessionErrorDomain = "WunderlistSessionErrorDomain"
 
-enum SessionErrorCode: Int {
+public enum SessionErrorCode: Int {
     case BackgroundTaskExpired
 }
 
 /** Posted on the `delegateQueue` right before calling completion handler,
     when session did become unauthorized due to HTTP status code 401 in reponse. */
-let WunderlistSessionDidBecomeUnauthorizedNotification = "WunderlistSessionDidBecomeUnauthorizedNotification"
+public let WunderlistSessionDidBecomeUnauthorizedNotification = "WunderlistSessionDidBecomeUnauthorizedNotification"
 
-typealias WunderlistSessionAuthorizationClosure = (result: Bool, error: NSError?) -> Void
+public typealias WunderlistSessionAuthorizationClosure = (result: Bool, error: NSError?) -> Void
 
 /** Shared instance of sesson. */
 private var _wunderlistSharedSession: Session!
 
 /** The wundurlist session. */
-@objc class Session {
+public class Session {
     
     /** The configuration for session. */
     let configuration           : Configuration
@@ -45,21 +45,21 @@ private var _wunderlistSharedSession: Session!
     let URLSession              : NSURLSession
     
     /** Initializes session with given configuration and delegate queue. */
-    init(configuration: Configuration, delegateQueue: NSOperationQueue =  NSOperationQueue.mainQueue()) {
+    public init(configuration: Configuration, delegateQueue: NSOperationQueue =  NSOperationQueue.mainQueue()) {
         self.configuration = configuration
         let URLConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
         URLSession = NSURLSession(configuration: URLConfiguration)
         self.delegateQueue = delegateQueue
     }
     
-    class func setupSharedSession(configuration: Configuration) {
+    public class func setupSharedSession(configuration: Configuration) {
         if _wunderlistSharedSession == nil {
             _wunderlistSharedSession = Session(configuration: configuration)
         }
     }
     
     /** Returns shared session. You have to setup session befor using it. See `setupSharedSession` method. */
-    class func sharedSession() -> Session {
+    public class func sharedSession() -> Session {
         if _wunderlistSharedSession != nil {
             return _wunderlistSharedSession
         }
@@ -74,7 +74,7 @@ private var _wunderlistSharedSession: Session!
         
         Completion handler is always called on the main thread.
     */
-    func authorize(onViewController: UIViewController, completionHandler: WunderlistSessionAuthorizationClosure) {
+    public func authorize(onViewController: UIViewController, completionHandler: WunderlistSessionAuthorizationClosure) {
         if authorizer != nil {
             completionHandler(result: false, error: nil)
             return
@@ -95,18 +95,18 @@ private var _wunderlistSharedSession: Session!
     }
     
     /** Deauthorizes the session. */
-    func deauthorize() {
+    public func deauthorize() {
         let account = accountForKeychain()
         //Keychain.removePasswordForAccount(account)
     }
     
     /** Whether session is authorized or non. */
-    func isAuthorized() -> Bool {
+    public func isAuthorized() -> Bool {
         return accessToken() != nil
     }
     
     /** Access token used by session. */
-    func accessToken() -> String? {
+    public func accessToken() -> String? {
         let account = accountForKeychain()
         return ""// Keychain.passwordForAccount(account)
     }
@@ -119,15 +119,15 @@ private var _wunderlistSharedSession: Session!
   
     
     
-    lazy var files      : Files         = { return Files(session: self)     }()
+    public lazy var files      : Files         = { return Files(session: self)     }()
     
-    lazy var reminders  : Reminders     = { return Reminders(session: self) }()
+    public lazy var reminders  : Reminders     = { return Reminders(session: self) }()
     
-    lazy var tasks      : Tasks         = { return Tasks(session: self)     }()
+    public lazy var tasks      : Tasks         = { return Tasks(session: self)     }()
     
-    lazy var uploads    : Uploads       = { return Uploads(session: self)   }()
+    public lazy var uploads    : Uploads       = { return Uploads(session: self)   }()
     
-    lazy var lists      : Lists         = { return Lists(session: self)     }()
+    public lazy var lists      : Lists         = { return Lists(session: self)     }()
     
     
 }

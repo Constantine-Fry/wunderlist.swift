@@ -9,7 +9,7 @@
 import Foundation
 
 /** The client information for oauth process. */
-struct Client {
+public struct Client {
     /** The client ID for oauth process. */
     let clientId        : String
     
@@ -19,7 +19,7 @@ struct Client {
     /** The redirect URL for oauth process. */
     let redirectURL     : NSURL
     
-    init(clientId: String, clientSecret: String, redirectURL: String) {
+    public init(clientId: String, clientSecret: String, redirectURL: String) {
         self.clientId = clientId
         self.clientSecret = clientSecret
         self.redirectURL = NSURL(string: redirectURL)!
@@ -40,11 +40,11 @@ struct Server {
 }
 
 /** Session configuratuon. */
-struct Configuration {
+public struct Configuration {
     let client: Client
     let server: Server
     
-    init(client: Client) {
+    public init(client: Client) {
         self.client = client
         self.server = Server()
     }

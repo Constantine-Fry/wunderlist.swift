@@ -13,7 +13,7 @@ import MobileCoreServices
     Represents Upload endpoint on Wunderilst.
     https://developer.wunderlist.com/documentation/endpoints/upload
 */
-@objc class Uploads: Endpoint {
+public class Uploads: Endpoint {
     override var endpoint: String {
         return "uploads"
     }
@@ -24,7 +24,7 @@ import MobileCoreServices
             2. Uploads file as on chunk.
             3. Marks upload as finished.
     */
-    func uploadFileAtURL(fileURL:NSURL, completionHandler: (uploadInfo: UploadInfo?, error: NSError?) -> Void) {
+    public func uploadFileAtURL(fileURL:NSURL, completionHandler: (uploadInfo: UploadInfo?, error: NSError?) -> Void) {
         let getURLTask = self.getUploadURLForFileAtURL(fileURL) {
             (uploadInfo, error) -> Void in
             if uploadInfo != nil {
@@ -57,7 +57,7 @@ import MobileCoreServices
     }
     
     /* This is the first step: receive upload URL. */
-    func getUploadURLForFileAtURL(fileURL:NSURL, completionHandler: (uploadInfo: UploadInfo?, error: NSError?) -> Void) -> SessionTask {
+    public func getUploadURLForFileAtURL(fileURL:NSURL, completionHandler: (uploadInfo: UploadInfo?, error: NSError?) -> Void) -> SessionTask {
         var UTI = UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, fileURL.pathExtension as NSString?, nil)
         var tag = UTTypeCopyPreferredTagWithClass(UTI.takeUnretainedValue(), kUTTagClassMIMEType)
         
@@ -82,7 +82,7 @@ import MobileCoreServices
     }
     
     /* This is the second step: actual upload. */
-    func uploadFile(fileURL: NSURL, uploadInfo: UploadInfo, completionHandler: (uploaded: Bool, error: NSError?) -> Void) -> SessionUploadTask {
+    public func uploadFile(fileURL: NSURL, uploadInfo: UploadInfo, completionHandler: (uploaded: Bool, error: NSError?) -> Void) -> SessionUploadTask {
         return uploadTaskWithFileURL(fileURL, uploadInfo: uploadInfo) {
             (finished, error) -> Void in
             completionHandler(uploaded: finished, error: error)
@@ -90,7 +90,7 @@ import MobileCoreServices
     }
     
     /** The last step: finilize uploading. */
-    func markUploadAsFinished(uploadId: Int, completionHandler: (marked: Bool, error: NSError?) -> Void)  -> SessionTask {
+    public func markUploadAsFinished(uploadId: Int, completionHandler: (marked: Bool, error: NSError?) -> Void)  -> SessionTask {
         let path = String(uploadId)
         let parameters = [
             "state" : "finished"

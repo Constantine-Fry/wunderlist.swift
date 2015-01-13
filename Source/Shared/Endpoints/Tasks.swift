@@ -8,18 +8,16 @@
 
 import Foundation
 
-
-
 /**
     Represents Tasks endpoint on Wunderilst.
     https://developer.wunderlist.com/documentation/endpoints/task
 */
-@objc class Tasks: Endpoint {
+public class Tasks: Endpoint {
     override var endpoint: String {
         return "tasks"
     }
     
-    func createTask(listId: Int, title: String, dueDate: NSDate?, completionHandler: (task: Task?, error: NSError?) -> Void) -> SessionTask {
+    public func createTask(listId: Int, title: String, dueDate: NSDate?, completionHandler: (task: Task?, error: NSError?) -> Void) -> SessionTask {
         var parameters = [
             "list_id"   : listId,
             "title"     : title
@@ -33,7 +31,7 @@ import Foundation
         }
     }
     
-    func updateTask(taskId: Int, revision: Int, title: String?, dueDate: NSDate?, completionHandler: (task: Task?, error: NSError?) -> Void) -> SessionTask {
+    public func updateTask(taskId: Int, revision: Int, title: String?, dueDate: NSDate?, completionHandler: (task: Task?, error: NSError?) -> Void) -> SessionTask {
         var parameters = [String: AnyObject]()
         parameters["revision"] = revision
         if title != nil {
@@ -49,7 +47,7 @@ import Foundation
         }
     }
     
-    func getTaskWithId(taskId: Int, completionHandler: (task: Task?, error: NSError?) -> Void) -> SessionTask {
+    public func getTaskWithId(taskId: Int, completionHandler: (task: Task?, error: NSError?) -> Void) -> SessionTask {
         let path = String(taskId)
         return taskWithPath(path, parameters: nil, HTTPMethod: "GET", transformClosure: { Task(JSON: $0) }) {
             (result, error) -> Void in

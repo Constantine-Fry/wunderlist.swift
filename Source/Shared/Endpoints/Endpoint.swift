@@ -12,7 +12,7 @@ typealias JSONTransformClosure = ([String: AnyObject]) -> AnyObject
 typealias CompletionClosure = (JSON: AnyObject?, error: NSError?) -> Void
 
 /** Base class for all endpoints. */
-@objc class Endpoint {
+public class Endpoint {
     
     /** Configuration of session. */
     weak var session: Session?

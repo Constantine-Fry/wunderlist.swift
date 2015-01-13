@@ -9,8 +9,8 @@
 import Foundation
 
 /** Base class for Wunderlist API objects. */
-@objc class Object: Printable {
-    let identifier: Int
+public class Object: Printable {
+    public let identifier: Int
     
     init(identifier: Int) {
       self.identifier = identifier
@@ -20,14 +20,14 @@ import Foundation
         self.identifier = extractInt(JSON, ["id"])!
     }
     
-    var description: String { get {
+    public var description: String { get {
         return "Object( \(identifier)))"
         }
     }
 }
 
-@objc class File: Object {
-    let filename: String?
+public class File: Object {
+    public let filename: String?
     
     init(identifier: Int, filename: String) {
         self.filename = filename
@@ -40,8 +40,8 @@ import Foundation
     }
 }
 
-@objc class List: Object {
-    let title: String?
+public class List: Object {
+    public let title: String?
     
     init(identifier: Int, title: String) {
         self.title = title
@@ -54,9 +54,9 @@ import Foundation
     }
 }
 
-@objc class Reminder: Object {
-    let date        : NSDate?
-    let taskId      : Int?
+public class Reminder: Object {
+    public let date        : NSDate?
+    public let taskId      : Int?
     
     init(identifier: Int, taskId: Int, date: NSDate) {
         self.date = date
@@ -73,10 +73,10 @@ import Foundation
     }
 }
 
-@objc class Task: Object  {
-    let title: String?
-    let revision : Int?
-    let dueDate : NSDate?
+public  class Task: Object  {
+    public let title: String?
+    public let revision : Int?
+    public let dueDate : NSDate?
     
     init(identifier: Int, title: String) {
         self.title = title
@@ -94,13 +94,13 @@ import Foundation
     }
 }
 
-@objc class UploadInfo: Object  {
+public  class UploadInfo: Object  {
     
     /** The URL where we should upload file. */
-    let uploadURL: NSURL?
+    public let uploadURL: NSURL?
 
     /** Receied from amazon. Should be added to HTTP header as `x-amz-date`. */
-    let date: String?
+    public let date: String?
     
     /** Receied from amazon. Should be added to HTTP header as `Authorization`. */
     let authorization: String?

@@ -12,13 +12,13 @@ import Foundation
     Represents Files endpoint on Wunderilst.
     https://developer.wunderlist.com/documentation/endpoints/file
 */
-@objc class Files: Endpoint {
+public class Files: Endpoint {
     override var endpoint: String {
         return "files"
     }
     
     
-    func createFile(uploadId: Int, taskId: Int, creationDate:NSDate?, completionHandler: (file: File?, error: NSError?) -> Void)  -> SessionTask {
+    public func createFile(uploadId: Int, taskId: Int, creationDate:NSDate?, completionHandler: (file: File?, error: NSError?) -> Void)  -> SessionTask {
         var parameters = [
             "upload_id" : uploadId,
             "task_id"   : taskId
@@ -32,7 +32,7 @@ import Foundation
         }
     }
     
-    func deleteFile(fileId: Int, revision: Int,  completionHandler: (result: Bool, error: NSError?) -> Void) -> SessionTask {
+    public func deleteFile(fileId: Int, revision: Int,  completionHandler: (result: Bool, error: NSError?) -> Void) -> SessionTask {
         var parameters = [
             "revision"  : String(revision),
             ] as [String: AnyObject]

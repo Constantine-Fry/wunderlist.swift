@@ -12,12 +12,12 @@ import Foundation
     Represents Reminders endpoint on Wunderilst.
     https://developer.wunderlist.com/documentation/endpoints/reminder
 */
-@objc class Reminders: Endpoint {
+public class Reminders: Endpoint {
     override var endpoint: String {
         return "reminders"
     }
     
-    func createReminder(taskId: Int, date: NSDate, complectionHandler: (reminder: Reminder?, error: NSError?) -> Void) -> SessionTask {
+    public func createReminder(taskId: Int, date: NSDate, complectionHandler: (reminder: Reminder?, error: NSError?) -> Void) -> SessionTask {
         var dateString = DateFormatter.sharedInstance().stringFromDate(date)
         let parameters = [
             "task_id"   : taskId,

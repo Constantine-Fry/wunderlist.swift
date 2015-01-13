@@ -516,6 +516,7 @@
 				47E67C901A3F8117001FBB7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		47E67CAC1A3F817A001FBB7A /* Build configuration list for PBXNativeTarget "WunderlistTouch" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +525,7 @@
 				47E67CAE1A3F817A001FBB7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

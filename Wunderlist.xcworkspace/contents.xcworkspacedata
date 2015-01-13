@@ -5,6 +5,9 @@
       location = "group:Source/Wunderlist/Wunderlist.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Demo/Demo-OSX/Demo-OSX.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Demo/Demo-iOS/Demo-iOS.xcodeproj">
    </FileRef>
 </Workspace>

@@ -13,7 +13,46 @@
 		47FA5CAA1A659B2B00D677BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 47FA5CA81A659B2B00D677BB /* Main.storyboard */; };
 		47FA5CAC1A659B2B00D677BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 47FA5CAB1A659B2B00D677BB /* Images.xcassets */; };
 		47FA5CAF1A659B2B00D677BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47FA5CAD1A659B2B00D677BB /* LaunchScreen.xib */; };
+		47FA5D041A659D0E00D677BB /* WunderlistTouch.framework in Copy frameworks */ = {isa = PBXBuildFile; fileRef = 47FA5D001A659CE800D677BB /* WunderlistTouch.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47FA5CFD1A659CE800D677BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47FA5CF81A659CE800D677BB /* Wunderlist.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 47E67C781A3F8116001FBB7A;
+			remoteInfo = Wunderlist;
+		};
+		47FA5CFF1A659CE800D677BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47FA5CF81A659CE800D677BB /* Wunderlist.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 47E67C991A3F817A001FBB7A;
+			remoteInfo = WunderlistTouch;
+		};
+		47FA5D011A659CEF00D677BB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 47FA5CF81A659CE800D677BB /* Wunderlist.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 47E67C981A3F817A001FBB7A;
+			remoteInfo = WunderlistTouch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		47FA5D031A659CFD00D677BB /* Copy frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				47FA5D041A659D0E00D677BB /* WunderlistTouch.framework in Copy frameworks */,
+			);
+			name = "Copy frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		47FA5C9D1A659B2B00D677BB /* Demo-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Demo-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,6 +63,7 @@
 		47FA5CA91A659B2B00D677BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		47FA5CAB1A659B2B00D677BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		47FA5CAE1A659B2B00D677BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		47FA5CF81A659CE800D677BB /* Wunderlist.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Wunderlist.xcodeproj; path = ../../Source/Wunderlist/Wunderlist.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +80,7 @@
 		47FA5C941A659B2B00D677BB = {
 			isa = PBXGroup;
 			children = (
+				47FA5CF81A659CE800D677BB /* Wunderlist.xcodeproj */,
 				47FA5C9F1A659B2B00D677BB /* Demo-iOS */,
 				47FA5C9E1A659B2B00D677BB /* Products */,
 			);
@@ -75,6 +116,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		47FA5CF91A659CE800D677BB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				47FA5CFE1A659CE800D677BB /* Wunderlist.framework */,
+				47FA5D001A659CE800D677BB /* WunderlistTouch.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -85,10 +135,12 @@
 				47FA5C991A659B2B00D677BB /* Sources */,
 				47FA5C9A1A659B2B00D677BB /* Frameworks */,
 				47FA5C9B1A659B2B00D677BB /* Resources */,
+				47FA5D031A659CFD00D677BB /* Copy frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				47FA5D021A659CEF00D677BB /* PBXTargetDependency */,
 			);
 			name = "Demo-iOS";
 			productName = "Demo-iOS";
@@ -120,12 +172,35 @@
 			mainGroup = 47FA5C941A659B2B00D677BB;
 			productRefGroup = 47FA5C9E1A659B2B00D677BB /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 47FA5CF91A659CE800D677BB /* Products */;
+					ProjectRef = 47FA5CF81A659CE800D677BB /* Wunderlist.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				47FA5C9C1A659B2B00D677BB /* Demo-iOS */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		47FA5CFE1A659CE800D677BB /* Wunderlist.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Wunderlist.framework;
+			remoteRef = 47FA5CFD1A659CE800D677BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		47FA5D001A659CE800D677BB /* WunderlistTouch.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = WunderlistTouch.framework;
+			remoteRef = 47FA5CFF1A659CE800D677BB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		47FA5C9B1A659B2B00D677BB /* Resources */ = {
@@ -152,6 +227,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		47FA5D021A659CEF00D677BB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = WunderlistTouch;
+			targetProxy = 47FA5D011A659CEF00D677BB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		47FA5CA81A659B2B00D677BB /* Main.storyboard */ = {

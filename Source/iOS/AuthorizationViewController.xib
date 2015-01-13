@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6246"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthorizationController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AuthorizationViewController" customModule="WunderlistTouch" customModuleProvider="target">
             <connections>
                 <outlet property="activityIndicator" destination="z6o-nA-due" id="9wT-xo-hRe"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Zsj-Qb-sIa"/>

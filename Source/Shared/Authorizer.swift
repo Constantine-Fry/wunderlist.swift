@@ -13,10 +13,10 @@ typealias AuthorizerClosure = (accessToken: String?, error: NSError?) -> Void
 
 
 /** Responsiable for autherization process. Presentes login page and exchange access code to access token. */
-class Authorizer: AuthorizationControllerDelegate {
+class Authorizer: AuthorizationViewControllerDelegate {
     
     /** The view controller which is used for authorization. */
-    var viewController: AuthorizationController?
+    var viewController: AuthorizationViewController?
     
     /** The configuration. */
     let configuration: Configuration
@@ -44,13 +44,13 @@ class Authorizer: AuthorizationControllerDelegate {
             NSURLQueryItem(name: "state",           value: authorizationState)
         ]
         let authorizationURL = components.URL!
-        viewController = AuthorizationController(authorizationURL: authorizationURL, redirectURL: redirectURL, delegate: self)
+        viewController = AuthorizationViewController(authorizationURL: authorizationURL, redirectURL: redirectURL, delegate: self)
         let navigationController = UINavigationController(rootViewController: viewController!)
         onViewController.presentViewController(navigationController, animated: true, completion: nil)
     }
     
     /** Continues authorization process. Exchanges access code to access token. */
-    func authorizationController(controller: AuthorizationController, didReachRedirectURL redirectURL: NSURL) {
+    func authorizationController(controller: AuthorizationViewController, didReachRedirectURL redirectURL: NSURL) {
         println(redirectURL)
         let redirectComponents = NSURLComponents(URL: redirectURL, resolvingAgainstBaseURL: false)!
         var code: String?
@@ -107,7 +107,7 @@ class Authorizer: AuthorizationControllerDelegate {
     }
     
     /** Called when user press cancel button. */
-    func authorizationControllerUserDidCancel(controller: AuthorizationController) {
+    func authorizationControllerUserDidCancel(controller: AuthorizationViewController) {
         controller.dismissViewControllerAnimated(true) {
             () -> Void in
             let cancelError = NSError(domain: NSCocoaErrorDomain, code: NSUserCancelledError, userInfo: nil)

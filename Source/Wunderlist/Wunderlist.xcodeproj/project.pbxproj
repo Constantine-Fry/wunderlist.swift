@@ -21,8 +21,8 @@
 		47E67CD51A3F8328001FBB7A /* Session.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CC01A3F8328001FBB7A /* Session.swift */; };
 		47E67CD61A3F8328001FBB7A /* SessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CC11A3F8328001FBB7A /* SessionTask.swift */; };
 		47E67CD71A3F8328001FBB7A /* SessionTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CC11A3F8328001FBB7A /* SessionTask.swift */; };
-		47E67CDE1A3F834A001FBB7A /* AuthorizationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CDC1A3F834A001FBB7A /* AuthorizationController.swift */; };
-		47E67CDF1A3F834A001FBB7A /* AuthorizationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E67CDD1A3F834A001FBB7A /* AuthorizationController.xib */; };
+		47E67CDE1A3F834A001FBB7A /* AuthorizationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CDC1A3F834A001FBB7A /* AuthorizationViewController.swift */; };
+		47E67CDF1A3F834A001FBB7A /* AuthorizationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47E67CDD1A3F834A001FBB7A /* AuthorizationViewController.xib */; };
 		47E67CE71A3F8862001FBB7A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE11A3F8862001FBB7A /* Endpoint.swift */; };
 		47E67CE81A3F8862001FBB7A /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE11A3F8862001FBB7A /* Endpoint.swift */; };
 		47E67CE91A3F8862001FBB7A /* Files.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CE21A3F8862001FBB7A /* Files.swift */; };
@@ -50,8 +50,8 @@
 		47E67CBE1A3F8328001FBB7A /* Objects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Objects.swift; sourceTree = "<group>"; };
 		47E67CC01A3F8328001FBB7A /* Session.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Session.swift; sourceTree = "<group>"; };
 		47E67CC11A3F8328001FBB7A /* SessionTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionTask.swift; sourceTree = "<group>"; };
-		47E67CDC1A3F834A001FBB7A /* AuthorizationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationController.swift; sourceTree = "<group>"; };
-		47E67CDD1A3F834A001FBB7A /* AuthorizationController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorizationController.xib; sourceTree = "<group>"; };
+		47E67CDC1A3F834A001FBB7A /* AuthorizationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthorizationViewController.swift; sourceTree = "<group>"; };
+		47E67CDD1A3F834A001FBB7A /* AuthorizationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AuthorizationViewController.xib; sourceTree = "<group>"; };
 		47E67CE11A3F8862001FBB7A /* Endpoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		47E67CE21A3F8862001FBB7A /* Files.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Files.swift; sourceTree = "<group>"; };
 		47E67CE31A3F8862001FBB7A /* Lists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lists.swift; sourceTree = "<group>"; };
@@ -159,8 +159,8 @@
 		47E67CB41A3F81B8001FBB7A /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				47E67CDC1A3F834A001FBB7A /* AuthorizationController.swift */,
-				47E67CDD1A3F834A001FBB7A /* AuthorizationController.xib */,
+				47E67CDC1A3F834A001FBB7A /* AuthorizationViewController.swift */,
+				47E67CDD1A3F834A001FBB7A /* AuthorizationViewController.xib */,
 			);
 			name = iOS;
 			path = ../iOS;
@@ -284,7 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				47E67CDF1A3F834A001FBB7A /* AuthorizationController.xib in Resources */,
+				47E67CDF1A3F834A001FBB7A /* AuthorizationViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,7 +323,7 @@
 				47E67CEA1A3F8862001FBB7A /* Files.swift in Sources */,
 				47E67CE81A3F8862001FBB7A /* Endpoint.swift in Sources */,
 				47E67CD71A3F8328001FBB7A /* SessionTask.swift in Sources */,
-				47E67CDE1A3F834A001FBB7A /* AuthorizationController.swift in Sources */,
+				47E67CDE1A3F834A001FBB7A /* AuthorizationViewController.swift in Sources */,
 				47E67CD11A3F8328001FBB7A /* Objects.swift in Sources */,
 				47E67CD51A3F8328001FBB7A /* Session.swift in Sources */,
 				47E67CC71A3F8328001FBB7A /* Configurations.swift in Sources */,

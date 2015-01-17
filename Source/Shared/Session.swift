@@ -33,16 +33,18 @@ private var _wunderlistSharedSession: Session!
 public class Session {
     
     /** The configuration for session. */
-    let configuration           : Configuration
+    public let configuration    : Configuration
     
     /** Authorizer for session. If not nil then we are in authorization process. */
     private var authorizer      : Authorizer?
     
     /** The queue on which all completion handlers must be called. */
-    let delegateQueue           : NSOperationQueue
+    let delegateQueue   : NSOperationQueue
     
     /** The URL session for API requests. */
     let URLSession              : NSURLSession
+    
+    private let keychain        : Keychain
     
     /** Initializes session with given configuration and delegate queue. */
     public init(configuration: Configuration, delegateQueue: NSOperationQueue =  NSOperationQueue.mainQueue()) {
@@ -50,6 +52,7 @@ public class Session {
         let URLConfiguration = NSURLSessionConfiguration.defaultSessionConfiguration()
         URLSession = NSURLSession(configuration: URLConfiguration)
         self.delegateQueue = delegateQueue
+        self.keychain = Keychain(configuration: configuration)
     }
     
     public class func setupSharedSession(configuration: Configuration) {
@@ -84,8 +87,7 @@ public class Session {
             (accessToken, error) -> Void in
             if accessToken != nil {
                 // Store access token.
-                let account = self.accountForKeychain()
-                //Keychain.setPassword(accessToken!, forAccount: account)
+                self.keychain.saveAccessToken(accessToken!)
             }
             NSOperationQueue.mainQueue().addOperationWithBlock {
                 completionHandler(result: accessToken != nil, error: error)
@@ -96,8 +98,7 @@ public class Session {
     
     /** Deauthorizes the session. */
     public func deauthorize() {
-        let account = accountForKeychain()
-        //Keychain.removePasswordForAccount(account)
+        keychain.deleteAccessToken()
     }
     
     /** Whether session is authorized or non. */
@@ -107,15 +108,10 @@ public class Session {
     
     /** Access token used by session. */
     public func accessToken() -> String? {
-        let account = accountForKeychain()
-        return ""// Keychain.passwordForAccount(account)
+        let (accessToken, _) = keychain.accessToken()
+        return accessToken
     }
     
-    /** The account name for keychain password. */
-    private func accountForKeychain() -> String {
-        let account = "io.fry.wunderlist." + configuration.client.clientId
-        return account
-    }
   
     
     

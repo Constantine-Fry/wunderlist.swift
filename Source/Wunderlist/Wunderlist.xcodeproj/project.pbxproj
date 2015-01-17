@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		473726131A6A506E007AF598 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473726121A6A506E007AF598 /* Keychain.swift */; };
+		473726141A6A51C3007AF598 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473726121A6A506E007AF598 /* Keychain.swift */; };
+		473726161A6A5242007AF598 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473726151A6A5242007AF598 /* Logger.swift */; };
+		473726171A6A5267007AF598 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 473726151A6A5242007AF598 /* Logger.swift */; };
 		47E67C7E1A3F8116001FBB7A /* Wunderlist.h in Headers */ = {isa = PBXBuildFile; fileRef = 47E67C7D1A3F8116001FBB7A /* Wunderlist.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47E67C9E1A3F817A001FBB7A /* WunderlistTouch.h in Headers */ = {isa = PBXBuildFile; fileRef = 47E67C9D1A3F817A001FBB7A /* WunderlistTouch.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47E67CC41A3F8328001FBB7A /* Authorizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47E67CB81A3F8328001FBB7A /* Authorizer.swift */; };
@@ -38,6 +42,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		473726121A6A506E007AF598 /* Keychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		473726151A6A5242007AF598 /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		47E67C781A3F8116001FBB7A /* Wunderlist.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Wunderlist.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		47E67C7C1A3F8116001FBB7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		47E67C7D1A3F8116001FBB7A /* Wunderlist.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Wunderlist.h; sourceTree = "<group>"; };
@@ -142,6 +148,8 @@
 				47E67CB81A3F8328001FBB7A /* Authorizer.swift */,
 				47E67CB91A3F8328001FBB7A /* Configurations.swift */,
 				47E67CBA1A3F8328001FBB7A /* DateFormatter.swift */,
+				473726121A6A506E007AF598 /* Keychain.swift */,
+				473726151A6A5242007AF598 /* Logger.swift */,
 				47E67CBE1A3F8328001FBB7A /* Objects.swift */,
 			);
 			name = Shared;
@@ -297,6 +305,7 @@
 			files = (
 				47E67CF11A3F8862001FBB7A /* Uploads.swift in Sources */,
 				47E67CE71A3F8862001FBB7A /* Endpoint.swift in Sources */,
+				473726131A6A506E007AF598 /* Keychain.swift in Sources */,
 				47E67CE91A3F8862001FBB7A /* Files.swift in Sources */,
 				47E67CC81A3F8328001FBB7A /* DateFormatter.swift in Sources */,
 				47E67CC41A3F8328001FBB7A /* Authorizer.swift in Sources */,
@@ -305,6 +314,7 @@
 				47E67CEF1A3F8862001FBB7A /* Tasks.swift in Sources */,
 				47E67CD01A3F8328001FBB7A /* Objects.swift in Sources */,
 				47E67CD41A3F8328001FBB7A /* Session.swift in Sources */,
+				473726161A6A5242007AF598 /* Logger.swift in Sources */,
 				47E67CC61A3F8328001FBB7A /* Configurations.swift in Sources */,
 				47E67CEB1A3F8862001FBB7A /* Lists.swift in Sources */,
 			);
@@ -324,9 +334,11 @@
 				47E67CE81A3F8862001FBB7A /* Endpoint.swift in Sources */,
 				47E67CD71A3F8328001FBB7A /* SessionTask.swift in Sources */,
 				47E67CDE1A3F834A001FBB7A /* AuthorizationViewController.swift in Sources */,
+				473726171A6A5267007AF598 /* Logger.swift in Sources */,
 				47E67CD11A3F8328001FBB7A /* Objects.swift in Sources */,
 				47E67CD51A3F8328001FBB7A /* Session.swift in Sources */,
 				47E67CC71A3F8328001FBB7A /* Configurations.swift in Sources */,
+				473726141A6A51C3007AF598 /* Keychain.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

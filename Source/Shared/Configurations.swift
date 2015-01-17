@@ -44,6 +44,9 @@ public struct Configuration {
     let client: Client
     let server: Server
     
+    /** The session tag for multiply accounts. */
+    public var sessionTag: String?
+    
     public init(client: Client) {
         self.client = client
         self.server = Server()

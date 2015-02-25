@@ -17,8 +17,42 @@ public class Files: Endpoint {
         return "files"
     }
     
+    public func getFilesForList(listId: Int,
+        completionHandler: (files: [File]?, error: NSError?) -> Void) -> SessionTask {
+            
+        var parameters = [
+        "list_id" : listId,
+        ] as [String: AnyObject]
+        return taskWithPath(nil, parameters: parameters, HTTPMethod: "GET", transformClosure: { File(JSON: $0) }) {
+            (result, error) -> Void in
+            completionHandler(files: result as [File]?, error: error)
+        }
+    }
     
-    public func createFile(uploadId: Int, taskId: Int, creationDate:NSDate?, completionHandler: (file: File?, error: NSError?) -> Void)  -> SessionTask {
+    public func getFilesForTask(taskId: Int,
+        completionHandler: (files: [File]?, error: NSError?) -> Void) -> SessionTask {
+            
+        var parameters = [
+            "task_id" : taskId,
+            ] as [String: AnyObject]
+        return taskWithPath(nil, parameters: parameters, HTTPMethod: "GET", transformClosure: { File(JSON: $0) }) {
+            (result, error) -> Void in
+            completionHandler(files: result as [File]?, error: error)
+        }
+    }
+    
+    public func getFile(fileId: Int,
+        completionHandler: (file: File?, error: NSError?) -> Void) -> SessionTask {
+            let path = String(fileId)
+            return taskWithPath(path, parameters: nil, HTTPMethod: "GET", transformClosure: { File(JSON: $0) }) {
+                (result, error) -> Void in
+                completionHandler(file: result as File?, error: error)
+            }
+    }
+    
+    public func createFile(uploadId: Int, taskId: Int, creationDate:NSDate?,
+        completionHandler: (file: File?, error: NSError?) -> Void)  -> SessionTask {
+            
         var parameters = [
             "upload_id" : uploadId,
             "task_id"   : taskId
@@ -32,7 +66,9 @@ public class Files: Endpoint {
         }
     }
     
-    public func deleteFile(fileId: Int, revision: Int,  completionHandler: (result: Bool, error: NSError?) -> Void) -> SessionTask {
+    public func deleteFile(fileId: Int, revision: Int,
+        completionHandler: (result: Bool, error: NSError?) -> Void) -> SessionTask {
+            
         var parameters = [
             "revision"  : String(revision),
             ] as [String: AnyObject]

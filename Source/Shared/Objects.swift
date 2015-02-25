@@ -26,13 +26,18 @@ public class Object: Printable {
     }
 }
 
-public class File: Object {
-    public let filename: String?
+public class RevisionedObject: Object {
+    public let revision: Int?
     
-    init(identifier: Int, filename: String) {
-        self.filename = filename
-        super.init(identifier: identifier)
+    override init(JSON: [String: AnyObject]) {
+        self.revision = extractInt(JSON, ["revision"])!
+        super.init(JSON: JSON)
     }
+    
+}
+
+public class File: RevisionedObject {
+    public let filename: String?
     
     override init(JSON: [String: AnyObject]) {
         self.filename = extractString(JSON, ["file_name"])
@@ -40,13 +45,8 @@ public class File: Object {
     }
 }
 
-public class List: Object {
+public class List: RevisionedObject {
     public let title: String?
-    
-    init(identifier: Int, title: String) {
-        self.title = title
-        super.init(identifier: identifier)
-    }
     
     override init(JSON: [String: AnyObject]) {
         self.title = extractString(JSON, ["title"])
@@ -73,19 +73,12 @@ public class Reminder: Object {
     }
 }
 
-public  class Task: Object  {
+public  class Task: RevisionedObject  {
     public let title: String?
-    public let revision : Int?
     public let dueDate : NSDate?
-    
-    init(identifier: Int, title: String) {
-        self.title = title
-        super.init(identifier: identifier)
-    }
     
     override init(JSON: [String: AnyObject]) {
         self.title = extractString(JSON, ["title"])
-        self.revision = extractInt(JSON, ["revision"])
         if let dueDateString = extractString(JSON, ["due_date"]) {
             self.dueDate = DateFormatter.sharedInstance().dateFromString(dueDateString)
         }
@@ -112,6 +105,17 @@ public  class UploadInfo: Object  {
         self.uploadURL = NSURL(string: extractString(JSON, ["part", "url"])!)
         self.date = extractString(JSON, ["part", "date"])
         self.authorization = extractString(JSON, ["part", "authorization"])
+        super.init(JSON: JSON)
+    }
+}
+
+public class TasksCount: Object {
+    public let completedCount: Int
+    public let uncompletedCount: Int
+    
+    override init(JSON: [String: AnyObject]) {
+        self.completedCount = extractInt(JSON, ["completed_count"])!
+        self.uncompletedCount = extractInt(JSON, ["uncompleted_count"])!
         super.init(JSON: JSON)
     }
 }
